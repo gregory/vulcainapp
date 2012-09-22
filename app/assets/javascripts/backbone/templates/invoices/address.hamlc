@@ -1,0 +1,11 @@
+A
+%a{:href => "#customers/#{@id}/edit"}
+  %i.icon-pencil
+%br
+= @email
+%br
+Rue sans soucis
+%br
+1348 Louvain la neuve
+%br
+Belgique

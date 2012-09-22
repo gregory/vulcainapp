@@ -1,0 +1,16 @@
+%h1< Edit project
+
+%form#edit-project{:name =>"project"}
+  .field
+    %label{:for => "name"}< name:
+    %input#name{:type =>"text", :name =>"name", :value =>@name}
+  .field
+    %label{:for => "customer_id"}< customer:
+    %select#customer_id{:name => 'customer_id'}
+      - for customer in Vulcainapp.datas.collections.customers.toJSON()
+        %option{:value => customer.id, :selected => (customer.id == @customer_id)}<
+          =customer.name
+
+  .actions
+    %input.btn.btn-primary{:type =>"submit", :value =>"Update Project"}
+    %a.btn.btn-warning{:href =>"#projects/index"}< Back

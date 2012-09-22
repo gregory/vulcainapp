@@ -1,0 +1,41 @@
+!!! 5
+%html
+  %head
+  %title Vulcainapp
+  = stylesheet_link_tag "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+%body#page-id
+  %header
+  %nav.navbar
+    .navbar-inner
+      .container
+        %a.brand{:href => '/'}< Vulcain App
+        %ul.nav
+          %li
+            %a{:href => "#"}< Roger Rabit
+          %li
+            %a{:href => "#"}< Paramètres
+          %li
+            %a{:href => "#"}< deconnexion
+
+  .container-fluid
+    .row-fluid
+      .span12
+        .tabbable
+          %ul#menu.nav.nav-tabs
+            %li
+              %a{:href => "#projects"}< projects
+            %li
+              %a{:href => "#customers"}< customers
+            %li.active
+              %a{:href => "#invoices"}< invoices
+            %li
+              %a{:href => "#articles"}< articles
+          .tab-content
+            .tab-pane#projects
+            .tab-pane#customers
+            .tab-pane.active#invoices
+            .tab-pane#articles
+= yield :javascript

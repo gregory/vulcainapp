@@ -1,0 +1,15 @@
+%td= @name
+%td
+  = @customer.name if @customer
+%td
+  .btn-group
+    %a.btn.dropdown-toglle{:'data-toggle' => 'dropdown', :href => '#'}<
+      action
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{:href => "#projects/#{@id}/edit"}< Edit
+      %li.divider
+      %li
+        %a.destroy{:href => "#projects/#{@id}/destroy"}< Delete
+

@@ -1,0 +1,14 @@
+.row-fluid
+  .span9
+    %table#projects-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< name
+          %th< customer name
+      %tbody
+  .span3
+    %a.btn.btn-success{:href =>"#/projects/new"}
+      %i.icon-plus
+      New project
+    %form.form-search
+      %input.input-meduim.search-query{:type => 'search', :placeholder => 'type to filter by projects'}

@@ -1,0 +1,34 @@
+%h1< Edit invoice
+
+%form#edit-invoice{:name =>"invoice"}
+  .field
+    %label{:for =>"title"}< title:
+    %input#title{type="text", :name =>"title", :value =>@title}
+
+  .field
+    %label{for="issue_date"}< issue_date:
+    %input#issue_date{:type =>"text", :name =>"issue_date", :value => @issue_date}
+
+  .field
+    %label{:for =>"due_date"}< due_date:
+    %input#due_date{:type =>"text", :name =>"due_date", :value => @due_date }
+
+  .field
+    %label{:for =>"header"}< header:
+    %input#header{:type =>"text", :name =>"header", :value => @header }
+
+  .field
+    %label{:for =>"footer"}< footer:
+    %input#footer{:type =>"text", :name =>"footer", :value => @footer}
+
+  .field
+    %label{:for => "project_id"}< project:
+    %select#project_id{:name => 'project_id'}
+      - for project in Vulcainapp.datas.collections.projects.toJSON()
+        %option{:value => project.id, :selected => (project.id == @project_id)}<
+          =project.name
+
+  .actions
+    %input{:type =>"submit", :value =>"Update Invoice"}
+
+%a.btn.btn-warning{:href =>"#invoices/index"}< Back

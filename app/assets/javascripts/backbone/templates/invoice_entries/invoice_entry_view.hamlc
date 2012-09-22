@@ -1,0 +1,16 @@
+%td<
+  = @article.title
+%td<
+  = @article.price
+  €
+%td.quantity<
+  %input.span4{type: 'text', name: 'quantity', value: @quantity, pattern:'\\d*?(\\.\\d*)?', required: true, placeholder: 'ex: 2'}
+%td.tva<
+  %input.span4{type: 'text', name: 'tva', value:  @tva, pattern:'[0-9]*', required: true, placeholder: 'ex: 21'}
+
+%td.total<
+  = @total
+  €
+%td<
+  %a.destroy{href: "#"}<
+    %i.icon-remove-sign<

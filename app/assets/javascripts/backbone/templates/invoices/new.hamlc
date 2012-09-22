@@ -1,0 +1,73 @@
+%form.span9#new-invoice{:name =>"invoice"}
+  .row-fluid
+    .span12
+      .span3
+        %h2< Facture
+      .span4
+        .field
+          %label{:for => "project_id"}< project:
+          %select#project_id{:name => 'project_id'}
+            - for project in Vulcainapp.datas.collections.projects.toJSON()
+              %option{:value => project.id, :selected => (project.id == @project_id)}<
+                =project.name
+  .row-fluid
+    %h3< Project Description
+    %p#project_title
+
+  .row-fluid
+    .span12
+      .span3
+        De
+        %br
+        %address
+          Roger Rabit
+          %br
+          Rue de la poste
+          %br
+          1348 Louvain la neuve
+          %br
+          Belgique
+      .span3.customer
+
+        %address
+      .span3
+        .control-group
+          .field
+            %label{for="issue_date"}< issue_date:
+            %input#issue_date.datepicker.btn.btn-info{:type =>"date", :name =>"issue_date", :value => @issue_date}
+          .field
+            %label{:for =>"due_date"}< due_date:
+            %input#due_date.datepicker.btn.btn-info{:type =>"date", :name =>"due_date", :value => @due_date }
+  .row-fluid
+    .field
+      %label{:for =>"header"}<
+      %textarea.span12.input-xlarge.tinymce#header{:name =>"header", placeholder: "ex:#{@header}"}
+        = @header
+  .row-fluid
+    %table#invoices-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< article
+          %th< prix
+          %th< quantie
+          %th< taux tva
+          %th< total
+          %th< action
+      %tbody
+      %tfoot
+        %tr
+          %td{colspan: 3}
+          %td< grand total
+          %td.grandtotal<
+          %td
+
+  .row-fluid
+    .field
+      %label{:for =>"footer"}<
+      %textarea.span12.input-xlarge.tinymce#header{:name =>"footer", placeholder: "ex:#{@footer}"}
+        = @footer
+  %input.btn.btn-primary{:type =>"submit", :value =>"Create Invoice"}
+.span3.last
+  .articles-list
+
+

@@ -1,0 +1,67 @@
+%form.span9#new-invoice{:name =>"invoice"}
+  .row-fluid
+    .span12
+      .span3
+        %h2< Facture
+      .span4
+
+  .row-fluid
+    %h3< Project Description
+    %p#project_title
+
+  .row-fluid
+    .span12
+      .span3
+        De
+        %br
+        %address
+          Joe boudin
+          %br
+          Rue du boudin
+          %br
+          1348 Louvain la neuve
+          %br
+          Belgique
+      .span3.customer
+        A
+        %i.icon-pencil
+        %br
+        %address
+          -console.log @project
+          test
+          %br
+          Rue sans souci
+          %br
+          1348 Louvain la neuve
+          %br
+          Belgique
+      .span3
+        #issue_date.btn.btn-info.disabled= @issue_date
+        #due_date.btn.btn-info.disabled= @due_date
+  .row-fluid
+    = @header
+  .row-fluid
+    %table#invoices-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< article
+          %th< prix
+          %th< quantie
+          %th< taux tva
+          %th< total
+          %th< action
+      %tbody
+      %tfoot
+        %tr
+          %td{colspan: 3}
+          %td< grand total
+          %td.grandtotal<
+          %td
+
+  .row-fluid
+    = @footer
+
+.span3.last
+  .top-actions
+    %a.btn.btn-warning{:href =>"#invoices/index"}< Back
+  .articles-list

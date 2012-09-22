@@ -1,0 +1,14 @@
+%h1< Edit customer
+
+%form#edit-customer{:name =>"customer"}
+  .field
+    %label{:for =>"name"}< name:
+    %input#name{:type =>"text", :name =>"name", :value =>@name}
+  .field
+    %label{:for =>"email"}< email:
+    %input#email{:type =>"email", :name =>"email", :value =>@email}
+
+  .actions
+    %input.btn.btn-primary{:type =>"submit", :value =>"Update Customer"}
+
+    %a.btn.btn-warning{:href =>"#customers/index"}< Back

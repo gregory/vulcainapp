@@ -1,0 +1,7 @@
+.filter.row-fluid
+  .top-actions
+    %a.btn.btn-warning{:href =>"#invoices/index"}< Back
+    %br
+    %input{type: 'search', placeholder: 'filter articles'}
+.list
+  %ul

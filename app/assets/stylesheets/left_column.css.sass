@@ -1,0 +1,82 @@
+$linkColorHover: blue
+.left_column
+  background: white
+  position: fixed
+  top: 40px
+  right: 0
+  bottom: 0
+  width: 245px
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  padding: 0
+  border-right: 1px solid #BBB
+  box-shadow: 0 0 20px #ccc
+  -webkit-box-shadow: 0 0 20px #ccc
+  -moz-box-shadow: 0 0 20px #ccc
+
+  .top-actions
+    background: #f7f9fb
+    border-bottom: 1px solid #D1DFEF
+    padding: 5px
+
+
+  .list
+    min-height: 300px
+
+    .nodata
+      padding: 5px
+      color: #777
+      font-style: italic
+
+
+    ul
+      margin: 0
+      padding: 0
+
+      li
+        margin: 0
+        padding: 0
+        list-style: none
+
+        &:hover,
+        &:focus,
+
+          a
+            color: #a0000b
+            outline: none
+
+
+        &.active
+          a
+            border: 0
+            border-bottom: 1px solid #D1DFEF
+            color: $linkColorHover
+            font-weight: bold
+
+
+        a
+          color: #333
+          display:block
+          padding: 3px 7px
+          text-decoration: none
+          background: #f7f9fb
+          border-bottom: 1px solid #D1DFEF !important
+          position: relative
+          -moz-border-radius: 0
+          border-radius: 0
+          margin-bottom: 2px
+
+          &:hover,
+          &:focus,
+          &.current,
+          &.ui-state-active
+            color: #a0000b
+            outline: none
+
+
+          &.current, &.active,
+          &.ui-state-active
+            font-weight: bold
+            border: 0
+            border-bottom: 1px solid #D1DFEF

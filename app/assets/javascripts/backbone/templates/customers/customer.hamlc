@@ -1,0 +1,13 @@
+%td= @name
+%td= @email
+%td
+  .btn-group
+    %a.btn.dropdown-toglle{:'data-toggle' => 'dropdown', :href => '#'}<
+      action
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{:href => "#customers/#{@id}/edit"}< Edit
+      %li.divider
+      %li
+        %a.destroy{:href => "#customers/#{@id}/destroy"}< Delete

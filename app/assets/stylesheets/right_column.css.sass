@@ -1,0 +1,50 @@
+.right_column
+  background: white
+  position: fixed
+  top: 40px
+  right: 0
+  bottom: 0
+  width: 245px
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  padding: 0
+  border-right: 1px solid #BBB
+  box-shadow: 0 0 20px #ccc
+  -webkit-box-shadow: 0 0 20px #ccc
+  -moz-box-shadow: 0 0 20px #ccc
+
+  .top-actions
+    background: white
+    top: 40px
+    position: fixed
+    height: 50px
+    width: 100%
+
+    .filter
+      width: 100%
+
+  .list
+    min-height: 300px
+    ul
+      margin: 50px 0 0 0
+      padding: 0
+
+      li
+        margin: 0
+        padding: 0
+        list-style: none
+        height: 100%
+
+        &:hover
+          z-index: 10
+          border-bottom: 1px solid thin
+          background: #EEE
+
+        a
+          display: block
+          padding: 5px 0 5px 0
+
+          &:hover
+            text-decoration: none
+

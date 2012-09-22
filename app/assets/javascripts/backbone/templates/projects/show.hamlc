@@ -1,0 +1,12 @@
+%p
+  %b< Name:
+  =@name
+- if @customer
+  %p
+    %b< Customer name
+    =@customer.name
+  %p
+    %b< Customer email
+    =@customer.email
+
+%a.btn.btn-warning{:href =>"#projects/index"}< Back

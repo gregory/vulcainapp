@@ -1,0 +1,13 @@
+#= require jquery
+#= require jquery_ujs
+#= require jquery.ui.datepicker
+#= require bootstrap-dropdown
+#= require bootstrap-tab
+#= require bootstrap-tooltip
+#= require bootstrap-popover
+#= require underscore
+#= require backbone
+#= require backbone_rails_sync
+#= require hamlcoffee
+#= require backbone_datalink
+#= require backbone/vulcainapp

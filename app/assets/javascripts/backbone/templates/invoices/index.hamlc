@@ -1,0 +1,33 @@
+.row-fluid
+  .span9
+    %table#invoices-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< status
+          %th< reference
+          %th< intitulé
+          %th< client
+          %th< issue date
+          %th< total
+          %th< action
+      %tbody
+  .span3
+    %a.btn.btn-success{:href =>"#/invoices/new"}
+      %i.icon-plus-sign
+      New Invoice
+    %form.form-search
+      %input.input-meduim.search-query{:type => 'search', :placeholder => 'type to filter by client'}
+    %form
+      %fieldset
+        .control-group
+          %label.control-label{:for =>'status'}< filter on status
+          .controls
+            %label.checkbox<
+              %input{:type => 'checkbox', :name => 'status', value => 'sent'}
+              sent
+            %label.checkbox<
+              %input{:type => 'checkbox', :name => 'status', value => 'draft'}
+              draft
+            %label.checkbox<
+              %input{:type => 'checkbox', :name => 'status', value => 'paid'}
+              paid

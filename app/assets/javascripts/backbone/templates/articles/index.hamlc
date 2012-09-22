@@ -1,0 +1,15 @@
+.row-fluid
+  .span9
+    %table#articles-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< title
+          %th< price
+          %th< description
+      %tbody
+  .span3
+    %a.btn.btn-success{:href =>"#/articles/new"}
+      %i.icon-plus
+      New article
+    %form.form-search
+      %input.input-meduim.search-query{:type => 'search', :placeholder => 'type to filter by article'}

@@ -1,0 +1,14 @@
+.row-fluid
+  .span9
+    %table#customers-table.table.table-striped.table-condensed
+      %thead
+        %tr
+          %th< name
+          %th< email
+      %tbody
+  .span3
+    %a.btn.btn-success{:href =>"#/customers/new"}
+      %i.icon-plus
+      New customer
+    %form.form-search
+      %input.input-meduim.search-query{:type => 'search', :placeholder => 'type to filter by customer'}

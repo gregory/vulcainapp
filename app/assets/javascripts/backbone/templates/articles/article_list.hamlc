@@ -1,0 +1,4 @@
+- for article in @article_list
+  %li{'data-id': article.id}
+    %a{rel: 'popover', 'data-content': article.description, 'data-original-title': article.title + ' (' + article.price + '€)'}<
+      = article.title

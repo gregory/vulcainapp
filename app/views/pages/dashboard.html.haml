@@ -1,0 +1,7 @@
+-content_for :javascript do
+  %script
+    !=%{ window.Vulcainapp.init({articles: #{Article.all.to_json.html_safe}, projects: #{Project.all.to_json.html_safe}, customers: #{Customer.all.to_json.html_safe}, invoices: #{Invoice.all.to_json.html_safe}}) }
+    =%{ new Vulcainapp.Routers.ProjectsRouter() }
+    =%{ new Vulcainapp.Routers.CustomersRouter() }
+    =%{ new Vulcainapp.Routers.InvoicesRouter().newInvoice() }
+    =%{ new Vulcainapp.Routers.ArticlesRouter() }

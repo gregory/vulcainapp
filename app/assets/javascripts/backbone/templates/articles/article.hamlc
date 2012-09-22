@@ -1,0 +1,16 @@
+%td= @title
+%td
+  =@price
+  €
+%td= @description
+%td
+  .btn-group
+    %a.btn.dropdown-toglle{:'data-toggle' => 'dropdown', :href => '#'}<
+      action
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{:href => "#articles/#{@id}/edit"}< Edit
+      %li.divider
+      %li
+        %a.destroy{:href => "#articles/#{@id}/destroy"}< Delete

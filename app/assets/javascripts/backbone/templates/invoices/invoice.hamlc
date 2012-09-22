@@ -1,0 +1,18 @@
+%td
+  %span.label.label-success< sent
+%td< ref
+%td= @title
+%td< client1
+%td= @issue_date
+%td< 35€
+%td
+  .btn-group
+    %a.btn.dropdown-toglle{:'data-toggle' => 'dropdown', :href => '#'}<
+      action
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{:href => "#invoices/#{@id}"}< Show
+      %li.divider
+      %li
+        %a.destroy{:href => "#invoices/#{@id}/destroy"}< Delete
